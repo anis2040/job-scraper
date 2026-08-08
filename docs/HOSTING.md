@@ -6,6 +6,8 @@ Your app is a **single Flask server** that serves the API, user data, and (after
 
 **Recommended path:** small VPS or home PC + **Docker Compose**. The image bundles Python, Gunicorn, TeX, and the React build. Profile data is bind-mounted to `./data/profiles` so rebuilds do not wipe users.
 
+**Scaling beyond one machine?** In **prod** (`FLASK_DEBUG=false`), follow the phased plan in [STORAGE_MIGRATION.md](STORAGE_MIGRATION.md) — PDFs to external storage first; shared SQL later (not SQLite on S3). **Dev** keeps the current on-disk layout.
+
 ---
 
 ## Docker Compose (recommended)

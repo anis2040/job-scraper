@@ -15,6 +15,8 @@ docker compose up -d --build
 
 Profiles, SQLite DBs, and generated PDFs live in `./data/profiles` on the host.
 
+For the planned move to object storage (PDFs) and shared SQL (scaling), see [docs/STORAGE_MIGRATION.md](docs/STORAGE_MIGRATION.md).
+
 ## React Dev Mode
 
 Use the root dev launcher when you want the React app and Flask backend together.
